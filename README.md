@@ -3,4 +3,4 @@ This 10-week online program equips participants with essential skills for career
 
 ---
 
-Linux is the first topic covered.
+# Linux is the first topic covered. 
