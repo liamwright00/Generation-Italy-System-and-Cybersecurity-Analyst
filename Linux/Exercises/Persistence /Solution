@@ -29,49 +29,68 @@ echo "School: $SCHOOL"
 ls /platform_9¾ > errors_hogwarts.txt 2> /dev/null  # Redirecting errors to /dev/null
 ```
 
-# Step 6: Create an alias named patronus that executes the command echo "Expecto Patronum!".
+
+# Step 6: Open the `.bashrc` file
+You can use any text editor you prefer. Here’s how to open it using `nano`:
+
 ```bash
-alias patronus='echo "Expecto Patronum!"'
+nano ~/.bashrc
 ```
 
-# Step 7: Create an alias named lumos that executes the command echo "Lumos!".
+# Step 7: Add the Aliases
+Scroll to the bottom of the `.bashrc` file and add the following lines:
+
 ```bash
+# Custom Aliases
+alias patronus='echo "Expecto Patronum!"'
 alias lumos='echo "Lumos!"'
 ```
 
-# Step 8: Use the alias patronus to print "Expecto Patronum!" and lumos to print "Lumos!" on the screen.
+# Step 8: Save and Exit
+If you're using `nano`, save the file by pressing `CTRL + O`, then hit `Enter`, and exit with `CTRL + X`.
+
+# Step 9: Source the `.bashrc` File
+To apply the changes you made, run the following command:
+
+```bash
+source ~/.bashrc
+```
+```
+
+
+# Step 10: Use the alias patronus to print "Expecto Patronum!" and lumos to print "Lumos!" on the screen.
 ```bash
 patronus
 lumos
 ```
 
-# Step 9: Use the pwd command to print the current directory.
+# Step 11: Use the pwd command to print the current directory.
 ```bash
 pwd
 ```
 
-# Step 10: Use the cd command to change the current directory to /tmp.
+# Step 12: Use the cd command to change the current directory to /tmp.
 ```bash
 cd /tmp
 ```
 
-# Step 11: Create a new directory named chamber_of_secrets inside /tmp.
+# Step 13: Create a new directory named chamber_of_secrets inside /tmp.
 ```bash
 mkdir chamber_of_secrets
 ```
 
-# Step 12: Navigate to the chamber_of_secrets directory and create three empty files.
+# Step 14: Navigate to the chamber_of_secrets directory and create three empty files.
 ```bash
 cd chamber_of_secrets
 touch diary_tom_riddle.txt basilisk.txt chamber_secret.txt
 ```
 
-# Step 13: Use the ls command to list the files in the chamber_of_secrets directory.
+# Step 15: Use the ls command to list the files in the chamber_of_secrets directory.
 ```bash
 ls
 ```
 
-# Step 14: Delete the file basilisk.txt using the rm command.
+# Step 16: Delete the file basilisk.txt using the rm command.
 ```bash
 rm basilisk.txt
 ```
