@@ -3,5 +3,5 @@ This 10-week online program equips participants with essential skills for career
 
 ---
 
-# Linux is the first topic covered. 
+# Linux is the first topic covered:
 https://github.com/liamwright00/Generation-Italy-System-and-Cybersecurity-Analyst/tree/main/Linux
