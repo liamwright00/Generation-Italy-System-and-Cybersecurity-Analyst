@@ -1,0 +1,4 @@
+- In Linux, running a process in the **foreground** means it takes over the terminal and you cannot use it for other commands until that process is completed. You can control foreground processes with signals like `Ctrl+C`or `Ctrl+Z` to terminate them.
+- Conversely, running a process in the **background** allows it to execute without occupying the terminal. You can continue using the terminal for other commands. To run a process in the background, append `&` to the command (e.g., `command &`).
+    
+    You can manage background processes with commands like `jobs` (active processes in Linux), `bg`, and `fg`.
