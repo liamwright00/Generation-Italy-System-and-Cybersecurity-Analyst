@@ -1,0 +1,2 @@
+- `locate`: search only commands used by user normally and have access to.  The`locate` command uses a database that is updated once a day using a cron job.
+    - `locate -i hostname:` case insensitive
