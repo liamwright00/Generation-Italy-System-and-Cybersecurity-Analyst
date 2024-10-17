@@ -1,97 +1,57 @@
+#!/bin/bash
 
-## Script
-
-```bash
 # Step 1: Create a variable named WIZARD and assign it the name of your favorite Harry Potter character.
-```bash
 WIZARD="Harry Potter"  # Change this to your favorite character
-```
 
 # Step 2: Create a variable named SPELL and assign it the value "Expecto Patronum."
-```bash
 SPELL="Expecto Patronum"
-```
 
 # Step 3: Create a variable named SCHOOL and assign it the value "Hogwarts."
-```bash
 SCHOOL="Hogwarts"
-```
 
 # Step 4: Use the echo command to print the values of the variables WIZARD, SPELL, and SCHOOL on the screen.
-```bash
 echo "Wizard: $WIZARD"
 echo "Spell: $SPELL"
 echo "School: $SCHOOL"
-```
 
 # Step 5: Redirect the output of the command ls /platform_9¾ (a fictitious directory) to a file named errors_hogwarts.txt.
-```bash
 ls /platform_9¾ > errors_hogwarts.txt 2> /dev/null  # Redirecting errors to /dev/null
-```
 
+# Step 6: Open the `.bashrc` file (this step requires manual intervention to edit the file)
+# You would normally open it like this:
+# nano ~/.bashrc
 
-# Step 6: Open the `.bashrc` file
-You can use any text editor you prefer. Here’s how to open it using `nano`:
+# Adding aliases (for this script, we'll just demonstrate adding them dynamically)
+echo "alias patronus='echo \"Expecto Patronum!\"'" >> ~/.bashrc
+echo "alias lumos='echo \"Lumos!\"'" >> ~/.bashrc
 
-```bash
-nano ~/.bashrc
-```
-
-# Step 7: Add the Aliases
-Scroll to the bottom of the `.bashrc` file and add the following lines:
-
-```bash
-# Custom Aliases
-alias patronus='echo "Expecto Patronum!"'
-alias lumos='echo "Lumos!"'
-```
-
-# Step 8: Save and Exit
-If you're using `nano`, save the file by pressing `CTRL + O`, then hit `Enter`, and exit with `CTRL + X`.
-
-# Step 9: Source the `.bashrc` File
-To apply the changes you made, run the following command:
-
-```bash
+# Step 7: Source the `.bashrc` file to apply the alias changes
 source ~/.bashrc
-```
-```
 
-
-# Step 10: Use the alias patronus to print "Expecto Patronum!" and lumos to print "Lumos!" on the screen.
-```bash
+# Step 8: Use the alias patronus and lumos to print "Expecto Patronum!" and "Lumos!"
 patronus
 lumos
-```
 
-# Step 11: Use the pwd command to print the current directory.
-```bash
+# Step 9: Use the pwd command to print the current directory.
 pwd
-```
 
-# Step 12: Use the cd command to change the current directory to /tmp.
-```bash
+# Step 10: Use the cd command to change the current directory to /tmp.
 cd /tmp
-```
 
-# Step 13: Create a new directory named chamber_of_secrets inside /tmp.
-```bash
+# Step 11: Create a new directory named chamber_of_secrets inside /tmp.
 mkdir chamber_of_secrets
-```
 
-# Step 14: Navigate to the chamber_of_secrets directory and create three empty files.
-```bash
+# Step 12: Navigate to the chamber_of_secrets directory and create three empty files.
 cd chamber_of_secrets
 touch diary_tom_riddle.txt basilisk.txt chamber_secret.txt
-```
 
-# Step 15: Use the ls command to list the files in the chamber_of_secrets directory.
-```bash
+# Step 13: Use the ls command to list the files in the chamber_of_secrets directory.
 ls
-```
 
-# Step 16: Delete the file basilisk.txt using the rm command.
-```bash
+# Step 14: Delete the file basilisk.txt using the rm command.
 rm basilisk.txt
-```
+
+# Final message
+echo "Script execution complete. Check the 'chamber_of_secrets' directory in /tmp."
+
 

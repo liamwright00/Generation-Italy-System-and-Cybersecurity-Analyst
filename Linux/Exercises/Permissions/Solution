@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Step 1: Creating the directory structure
+mkdir -p /home/utente/progetto/src
+mkdir -p /home/utente/progetto/backup
+
+# Step 2: Creating files and content
+cd /home/utente/progetto/src
+touch main.c
+echo "Progetto di gestione file" > README.txt
+
+# Step 3: Setting up environment variable
+export PROGETTO_PATH="/home/utente/progetto"
+echo "PROGETTO_PATH is set to: $PROGETTO_PATH"
+
+# Step 4: Setting permissions
+chmod 755 /home/utente/progetto/src
+chmod 600 /home/utente/progetto/src/main.c
+chmod 600 /home/utente/progetto/src/README.txt
+
+# Step 5: Creating a backup
+cp /home/utente/progetto/src/main.c /home/utente/progetto/backup/
+
+# Step 6: Moving and renaming
+mv /home/utente/progetto/src/README.txt /home/utente/progetto/backup/INFO.txt
+
+# Step 7: Setting umask and creating a new file
+umask 027
+touch /home/utente/progetto/backup/config.ini
+ls -l /home/utente/progetto/backup/config.ini  # Check permissions
+
+# Step 8: Creating links
+ln /home/utente/progetto/src/main.c /home/utente/progetto/backup/main.c
+ln -s /home/utente/progetto/src/main.c /home/utente/progetto/link_main
+
+# Step 9: Removing files and directories
+rm /home/utente/progetto/backup/config.ini
+rm /home/utente/progetto/src/main.c
+rmdir /home/utente/progetto/src
+
+# Step 10: Final verification
+echo "Final structure and permissions:"
+ls -lR /home/utente/progetto
